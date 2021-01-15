@@ -1,0 +1,36 @@
+.content {
+  max-width: 1170px;
+  margin: 0px auto;
+  border: 2px solid blue;
+}
+
+body {
+  background-color: #A29BFE;
+  font-family: Inter;
+}
+
+body .wrapper {
+  max-width: 1440px;
+  margin: 0px auto;
+  margin-top: 50px;
+  background-color: #fff;
+  border: 2px solid red;
+  border-radius: 20px;
+}
+
+body .wrapper header .header__flexcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 96px;
+}
+
+body .wrapper header .header__flexcon .header__logo {
+  margin-left: 72px;
+}

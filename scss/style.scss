@@ -1,0 +1,43 @@
+// Переменные
+$perpl: #6C5CE7;
+$title_color: #2D3436;
+// Mixins
+@mixin text($fs,$c,$fw,$ls){
+    font-size: $fs;
+    color:$c;
+    font-weight: $fw;
+    letter-spacing: $ls;
+}
+// Шаблоны
+%Color{
+    color:$perpl;
+}
+// Code
+.content{
+    max-width: 1170px;
+    margin: 0px auto;
+    border: 2px solid blue;
+    } 
+body{
+    background-color: #A29BFE;
+    font-family: Inter;
+    .wrapper{
+        max-width: 1440px;
+        margin: 0px auto;
+        margin-top: 50px;
+        background-color: #fff;
+        border: 2px solid red;
+        border-radius: 20px;
+        header{
+          .header__flexcon{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 96px;
+              .header__logo{
+                  margin-left: 72px;
+              }
+          }
+        }
+    }
+}
