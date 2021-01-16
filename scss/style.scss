@@ -99,6 +99,10 @@ body{
                       a{
                         @include text(18px,$perpl,normal,0.2px);
                         text-decoration: none;
+                        transition: all 0.25s ease;
+                        &:hover{
+                            @include text (18px,$title_color,bold,0.2px);
+                        }
                       }   
                   }
               }
@@ -112,6 +116,10 @@ body{
                     padding: 17px 45px;
                     text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
                     box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                    transition: all 0.5s ease;
+                    &:hover{
+                        background-color: $title_color;
+                    }
                 }
               }
           }

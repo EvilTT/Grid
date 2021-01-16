@@ -119,6 +119,16 @@ body .wrapper header .header__flexcon .header__menu nav a {
   font-weight: normal;
   letter-spacing: 0.2px;
   text-decoration: none;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+body .wrapper header .header__flexcon .header__menu nav a:hover {
+  font-size: 18px;
+  color: #2D3436;
+  font-weight: bold;
+  letter-spacing: 0.2px;
 }
 
 body .wrapper header .header__flexcon .header__button > a {
@@ -133,4 +143,11 @@ body .wrapper header .header__flexcon .header__button > a {
   text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
   -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
           box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .wrapper header .header__flexcon .header__button > a:hover {
+  background-color: #2D3436;
 }
