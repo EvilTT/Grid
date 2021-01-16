@@ -9,33 +9,110 @@ $title_color: #2D3436;
     letter-spacing: $ls;
 }
 // Шаблоны
-%Color{
-    color:$perpl;
+%Font{
+    font-family: 'Roboto', sans-serif;
 }
 // Code
 .content{
     max-width: 1170px;
     margin: 0px auto;
-    border: 2px solid blue;
     } 
+a{
+    @extend %Font;
+}
+
 body{
     background-color: #A29BFE;
-    font-family: Inter;
     .wrapper{
         max-width: 1440px;
         margin: 0px auto;
         margin-top: 50px;
         background-color: #fff;
-        border: 2px solid red;
         border-radius: 20px;
         header{
+            box-shadow: 0px 2px 5px rgba(35, 47, 53, 0.281);
+            position: sticky;
+            top: 0px;
+            background-color: #fff;
+            border-radius: 20px;
           .header__flexcon{
               display: flex;
               justify-content: space-between;
               align-items: center;
               height: 96px;
               .header__logo{
-                  margin-left: 72px;
+                margin-left: 72px;
+                position: relative;
+                  >a{
+                    @include text(48px,$title_color,bold,-1px);
+                    text-decoration: none;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 35px;
+                        height: 35px;
+                        background-image: url('../image/icon-layout.png');
+                        top: 6px;
+                        left: -72.5px + 19px;
+                        background-position: center center;
+                    }
+                  }
+              }
+              .header__menu{
+                  nav{
+                      display: flex;
+                      align-items: center;
+                      min-width: 582px;
+                      justify-content: space-between;
+                      position: relative;
+                      .nav_two::before{
+                          content:'';
+                          position: absolute;
+                          width: 7px;
+                          height: 7px;
+                          background-color: #FDCB6E;
+                          top: 7px;
+                          border-radius: 50%;
+                          left: 137px;
+                      } 
+                      .nav_three::before{
+                        content:'';
+                        position: absolute;
+                        width: 7px;
+                        height: 7px;
+                        background-color: #FDCB6E;
+                        top: 7px;
+                        border-radius: 50%;
+                        left: 298px;
+                      } 
+                      .nav_four::before{
+                        content:'';
+                        position: absolute;
+                        width: 7px;
+                        height: 7px;
+                        background-color: #FDCB6E;
+                        top: 7px;
+                        border-radius: 50%;
+                        left: 458px;
+                      }
+                        
+                      a{
+                        @include text(18px,$perpl,normal,0.2px);
+                        text-decoration: none;
+                      }   
+                  }
+              }
+              .header__button{
+                >a{
+                    @include text(24px,white,bold,0.25px);
+                    @extend %Font;
+                    text-decoration: none;
+                    background-color:$perpl;
+                    border-radius:40px;
+                    padding: 17px 45px;
+                    text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                    box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                }
               }
           }
         }
