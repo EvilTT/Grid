@@ -1,4 +1,4 @@
-a, body .wrapper header .header__flexcon .header__button > a {
+body, body .wrapper header .header__flexcon .header__button > a {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -14,7 +14,7 @@ body {
 body .wrapper {
   max-width: 1440px;
   margin: 0px auto;
-  margin-top: 50px;
+  margin-top: 30px;
   background-color: #fff;
   border-radius: 20px;
 }
@@ -27,6 +27,7 @@ body .wrapper header {
   top: 0px;
   background-color: #fff;
   border-radius: 20px;
+  z-index: 5;
 }
 
 body .wrapper header .header__flexcon {
@@ -150,4 +151,55 @@ body .wrapper header .header__flexcon .header__button > a {
 
 body .wrapper header .header__flexcon .header__button > a:hover {
   background-color: #2D3436;
+}
+
+body .wrapper .title__section {
+  position: relative;
+  background-image: url("../image/Rectangle.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  border: 1px solid transparent;
+  z-index: 1;
+}
+
+body .wrapper .title__section::after {
+  content: '';
+  position: absolute;
+  width: 209px;
+  height: 285px;
+  background-image: url("../image/tochki.png");
+  background-position: center center;
+  right: 0px;
+  top: 18px;
+}
+
+body .wrapper .title__section .title {
+  text-align: center;
+  margin-top: 176px;
+}
+
+body .wrapper .title__section .title h1 {
+  margin: 0px;
+  font-size: 96px;
+  color: #2D3436;
+  font-weight: 800;
+  letter-spacing: 0.25px;
+}
+
+body .wrapper .title__section .title h1 span {
+  color: #D63031;
+  text-shadow: 0px 6px white;
+  position: relative;
+}
+
+body .wrapper .title__section .title h1 span::after {
+  position: absolute;
+  content: '';
+  background-color: #55EFC4;
+  border-radius: 30px;
+  width: 191px;
+  height: 51px;
+  top: 70px;
+  right: -14px;
+  z-index: -1;
 }

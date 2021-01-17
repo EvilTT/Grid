@@ -17,16 +17,13 @@ $title_color: #2D3436;
     max-width: 1170px;
     margin: 0px auto;
     } 
-a{
-    @extend %Font;
-}
-
 body{
     background-color: #A29BFE;
+    @extend %Font;
     .wrapper{
         max-width: 1440px;
         margin: 0px auto;
-        margin-top: 50px;
+        margin-top: 30px;
         background-color: #fff;
         border-radius: 20px;
         header{
@@ -35,6 +32,7 @@ body{
             top: 0px;
             background-color: #fff;
             border-radius: 20px;
+            z-index: 5;
           .header__flexcon{
               display: flex;
               justify-content: space-between;
@@ -123,6 +121,50 @@ body{
                 }
               }
           }
+        }
+        .title__section{
+            position: relative;
+            background-image: url("../image/Rectangle.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            border: 1px solid transparent;
+            z-index: 1;
+            // без border отступ кривой
+            &::after{
+                content:'';
+                position: absolute;
+                width: 209px;
+                height: 285px;
+                background-image: url("../image/tochki.png");
+                background-position: center center;
+                right: 0px;
+                top: 18px;
+            }
+            .title{
+                text-align: center;
+                margin-top: 176px;
+                h1{
+                    margin: 0px;
+                    @include text(96px,$title_color,800,0.25px);
+                    
+                    span{
+                        color:#D63031;
+                        text-shadow: 0px 6px white;
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content:'';
+                            background-color: #55EFC4;
+                            border-radius: 30px;
+                            width: 191px;
+                            height: 51px;
+                            top: 70px;
+                            right: -14px;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
         }
     }
 }
