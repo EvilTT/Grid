@@ -21,6 +21,9 @@ body{
     background-color: #A29BFE;
     @extend %Font;
     .wrapper{
+        background-image: url("../image/Rectangle.png");
+        background-repeat: no-repeat;
+        background-position: right top;
         max-width: 1440px;
         margin: 0px auto;
         margin-top: 30px;
@@ -124,9 +127,7 @@ body{
         }
         .title__section{
             position: relative;
-            background-image: url("../image/Rectangle.png");
-            background-repeat: no-repeat;
-            background-position: right top;
+            
             box-sizing: border-box;
             border: 1px solid transparent;
             z-index: 1;
@@ -163,6 +164,24 @@ body{
                             right: -14px;
                             z-index: -1;
                         }
+                    }
+                }
+            }
+        }
+        .title__image{
+            .title__image_container{
+                margin-top: 64px;
+                border: 2px solid red;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .title__image_eltwo{
+                    display: flex;
+                    flex-direction: column;
+                    .eltwo__colum_top{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                     }
                 }
             }

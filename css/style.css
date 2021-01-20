@@ -12,6 +12,9 @@ body {
 }
 
 body .wrapper {
+  background-image: url("../image/Rectangle.png");
+  background-repeat: no-repeat;
+  background-position: right top;
   max-width: 1440px;
   margin: 0px auto;
   margin-top: 30px;
@@ -155,9 +158,6 @@ body .wrapper header .header__flexcon .header__button > a:hover {
 
 body .wrapper .title__section {
   position: relative;
-  background-image: url("../image/Rectangle.png");
-  background-repeat: no-repeat;
-  background-position: right top;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid transparent;
@@ -204,4 +204,40 @@ body .wrapper .title__section .title h1 span::after {
   top: 70px;
   right: -14px;
   z-index: -1;
+}
+
+body .wrapper .title__image .title__image_container {
+  margin-top: 64px;
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .eltwo__colum_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
