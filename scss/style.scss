@@ -127,6 +127,7 @@ body{
             background-image: url("../image/Rectangle.png");
             background-repeat: no-repeat;
             background-position: right top;
+            box-sizing: border-box;
             border: 1px solid transparent;
             z-index: 1;
             // без border отступ кривой

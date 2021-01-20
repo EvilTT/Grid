@@ -158,6 +158,8 @@ body .wrapper .title__section {
   background-image: url("../image/Rectangle.png");
   background-repeat: no-repeat;
   background-position: right top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid transparent;
   z-index: 1;
 }
