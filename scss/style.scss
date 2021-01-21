@@ -13,10 +13,13 @@ $title_color: #2D3436;
     font-family: 'Roboto', sans-serif;
 }
 // Code
+*{
+    box-sizing: border-box;
+}
 .content{
-    max-width: 1170px;
+    max-width: 1174px;
     margin: 0px auto;
-    } 
+} 
 body{
     background-color: #A29BFE;
     @extend %Font;
@@ -95,8 +98,7 @@ body{
                         top: 7px;
                         border-radius: 50%;
                         left: 458px;
-                      }
-                        
+                      }   
                       a{
                         @include text(18px,$perpl,normal,0.2px);
                         text-decoration: none;
@@ -113,7 +115,7 @@ body{
                     @extend %Font;
                     text-decoration: none;
                     background-color:$perpl;
-                    border-radius:40px;
+                    border-radius:55px;
                     padding: 17px 45px;
                     text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
                     box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
@@ -127,10 +129,9 @@ body{
         }
         .title__section{
             position: relative;
-            
             box-sizing: border-box;
-            border: 1px solid transparent;
             z-index: 1;
+            padding-top: 176px;
             // без border отступ кривой
             &::after{
                 content:'';
@@ -144,7 +145,6 @@ body{
             }
             .title{
                 text-align: center;
-                margin-top: 176px;
                 h1{
                     margin: 0px;
                     @include text(96px,$title_color,800,0.25px);
@@ -170,19 +170,131 @@ body{
         }
         .title__image{
             .title__image_container{
-                margin-top: 64px;
-                border: 2px solid red;
+                margin-top: 79px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                .title__image_elone{
+                    .title__text{
+                        >p{
+                            @include text(18px,$title_color,normal, normal);
+                            line-height: 32px;
+                            margin: 0;
+                            padding-bottom: 30px;
+                            position: relative;
+                            &::before{
+                                content:"This is multipurpose grid, it fits for portfolio, services or agency web site";
+                                position: absolute;
+                                @include text(18px,$title_color,400,normal);
+                                top: 30px;
+                                min-width: 370px;
+                                left: 800px;
+
+                            }
+                        }
+                    }
+                    .image__elone_image{
+                        position: relative;
+                        transition: 0.3s;
+                        &:hover{
+                            transform:scale(1.1);
+                        }
+                        &::after{
+                            content:'We aimed to deliver HQ templates for Figma';
+                            position: absolute;
+                            @include text(18px,white,bold,0.2px);
+                            line-height: 32px;
+                            top: 51px;
+                            left: -1px;
+                            text-align: center;
+                        }
+                        &::before{
+                            content:'Used by 123 people';
+                            position: absolute;
+                            @include text(14px,white,normal,0.25px);
+                            line-height: 24px;
+                            top: 115px;
+                            right: 70px;
+                            text-align: center;
+                        }
+                        // &:hover{
+                            
+                        // }
+                    }
+                    .title__button{
+                        margin-top: 55px;
+                        >a{
+                            @include text(32px,white,bold,-0.5px);
+                            text-decoration: none;
+                            padding: 25px 50px;
+                            border-radius: 50px;
+                            background-color: $perpl;
+                            text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                            box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                            transition: all 0.5s ease;
+                            &:hover{
+                                background-color: $title_color;
+                            }
+                        }
+                    }
+                }
                 .title__image_eltwo{
                     display: flex;
-                    flex-direction: column;
-                    .eltwo__colum_top{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
+                    flex-wrap: wrap;
+                    flex-basis: 200%;
+                    overflow: visible;
+                    .image__eltwo_img{
+                        position: relative;
+                        transition: 0.3s;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                        &:nth-child(1){
+                            padding: 0px 15px 15px 30px;
+                            &::before{
+                                content:"Consider it done!";
+                                position: absolute;
+                                @include text(48px,white,700,-1px);
+                                text-shadow: 0px 4px 0px #000000;
+                                top: 312px;
+                                left: 90px;
+                            }
+                        }
+                        &:nth-child(2){
+                             padding: 159px 15px 0px 15px;
+                        }
+                        &:nth-child(3){
+                             padding: 159px 0px 0px 15px;
+                             &::after{
+                                content:"";
+                                position: absolute;
+                                background-image: url('../image/title4eff.png');
+                                width: 170px;
+                                height: 128px;
+                                z-index: 4;
+                                top: 254px;
+                                right: 0px;
+                            }
+                        }
+                        &:nth-child(4){
+                            padding: 15px 15px 0px 30px;
+                        }
+                        &:nth-child(5){
+                            padding: 15px 15px 0px 15px;
+                            &::before{
+                                content:"See my goal?";
+                                position: absolute;
+                                @include text(48px,white,700,-1px);
+                                text-shadow: 0px 4px 0px #000000;
+                                top: 37px;
+                                left: 60px;
+                            }
+                        }
+                        &:nth-child(6){
+                            padding: 15px 0px 0px 15px;
+                        }
                     }
+                    
                 }
             }
         }

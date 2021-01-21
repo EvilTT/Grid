@@ -2,8 +2,13 @@ body, body .wrapper header .header__flexcon .header__button > a {
   font-family: 'Roboto', sans-serif;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .content {
-  max-width: 1170px;
+  max-width: 1174px;
   margin: 0px auto;
 }
 
@@ -142,7 +147,7 @@ body .wrapper header .header__flexcon .header__button > a {
   letter-spacing: 0.25px;
   text-decoration: none;
   background-color: #6C5CE7;
-  border-radius: 40px;
+  border-radius: 55px;
   padding: 17px 45px;
   text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
   -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
@@ -160,8 +165,8 @@ body .wrapper .title__section {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid transparent;
   z-index: 1;
+  padding-top: 176px;
 }
 
 body .wrapper .title__section::after {
@@ -177,7 +182,6 @@ body .wrapper .title__section::after {
 
 body .wrapper .title__section .title {
   text-align: center;
-  margin-top: 176px;
 }
 
 body .wrapper .title__section .title h1 {
@@ -207,8 +211,7 @@ body .wrapper .title__section .title h1 span::after {
 }
 
 body .wrapper .title__image .title__image_container {
-  margin-top: 64px;
-  border: 2px solid red;
+  margin-top: 79px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,26 +221,174 @@ body .wrapper .title__image .title__image_container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .title__text > p {
+  font-size: 18px;
+  color: #2D3436;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 32px;
+  margin: 0;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .title__text > p::before {
+  content: "This is multipurpose grid, it fits for portfolio, services or agency web site";
+  position: absolute;
+  font-size: 18px;
+  color: #2D3436;
+  font-weight: 400;
+  letter-spacing: normal;
+  top: 30px;
+  min-width: 370px;
+  left: 800px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .image__elone_image {
+  position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .image__elone_image:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .image__elone_image::after {
+  content: 'We aimed to deliver HQ templates for Figma';
+  position: absolute;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  line-height: 32px;
+  top: 51px;
+  left: -1px;
+  text-align: center;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .image__elone_image::before {
+  content: 'Used by 123 people';
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 0.25px;
+  line-height: 24px;
+  top: 115px;
+  right: 70px;
+  text-align: center;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .title__button {
+  margin-top: 55px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .title__button > a {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  padding: 25px 50px;
+  border-radius: 50px;
+  background-color: #6C5CE7;
+  text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+          box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .wrapper .title__image .title__image_container .title__image_elone .title__button > a:hover {
+  background-color: #2D3436;
 }
 
 body .wrapper .title__image .title__image_container .title__image_eltwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 200%;
+      flex-basis: 200%;
+  overflow: visible;
 }
 
-body .wrapper .title__image .title__image_container .title__image_eltwo .eltwo__colum_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img {
+  position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(1) {
+  padding: 0px 15px 15px 30px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(1)::before {
+  content: "Consider it done!";
+  position: absolute;
+  font-size: 48px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0px 4px 0px #000000;
+  top: 312px;
+  left: 90px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(2) {
+  padding: 159px 15px 0px 15px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(3) {
+  padding: 159px 0px 0px 15px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  background-image: url("../image/title4eff.png");
+  width: 170px;
+  height: 128px;
+  z-index: 4;
+  top: 254px;
+  right: 0px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(4) {
+  padding: 15px 15px 0px 30px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(5) {
+  padding: 15px 15px 0px 15px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(5)::before {
+  content: "See my goal?";
+  position: absolute;
+  font-size: 48px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0px 4px 0px #000000;
+  top: 37px;
+  left: 60px;
+}
+
+body .wrapper .title__image .title__image_container .title__image_eltwo .image__eltwo_img:nth-child(6) {
+  padding: 15px 0px 0px 15px;
 }
