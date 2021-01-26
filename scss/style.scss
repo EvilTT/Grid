@@ -120,8 +120,37 @@ body{
                     text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
                     box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
                     transition: all 0.5s ease;
+                    z-index: 1;
+                    position: relative;
                     &:hover{
                         background-color: $title_color;
+                    }
+                    &:hover::before{
+                        content:'';
+                        height: 63px;
+                        position: absolute;
+                        width: 166px;
+                        background-color: #2d343693;
+                        z-index: -1;
+                        opacity: 0;
+                        border-radius: 55px;
+                        top: 0px;
+                        left: 0px;
+                        animation-delay: 0.5s;
+                        animation: PulsButtonHeader 0.8s linear 1;  
+                    }
+                    &:hover::after{
+                        content:'';
+                        height: 63px;
+                        position: absolute;
+                        width: 166px;
+                        background-color: #2d343618;
+                        z-index: -1;
+                        opacity: 0;
+                        border-radius: 55px;
+                        top: 0px;
+                        left: 0px;
+                        animation: PulsButtonHeader 0.8s linear 1;
                     }
                 }
               }
@@ -174,6 +203,7 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding-bottom: 80px;
                 .title__image_elone{
                     .title__text{
                         >p{
@@ -217,9 +247,6 @@ body{
                             right: 70px;
                             text-align: center;
                         }
-                        // &:hover{
-                            
-                        // }
                     }
                     .title__button{
                         margin-top: 55px;
@@ -231,9 +258,44 @@ body{
                             background-color: $perpl;
                             text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
                             box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
-                            transition: all 0.5s ease;
+                            transition: all 0.7s ease;
+                            position: relative;
+                            z-index: 1;
                             &:hover{
                                 background-color: $title_color;
+                            }
+                            &::before{
+                                content:"";
+                                position: absolute;
+                                height: 88px;
+                                width: 260px;
+                                border-radius: 70px;
+                                background-color: #6c5ce773;
+                                left: 0px;
+                                top: 0px;
+                                opacity: 0;
+                                animation-delay: 0.3s;
+                                animation: PulsButton 1s linear infinite;
+                                z-index: -1;
+                            }
+                            &::after{
+                                content:"";
+                                position: absolute;
+                                height: 88px;
+                                width: 260px;
+                                border-radius: 70px;
+                                background-color: #6c5ce749; 
+                                left: 0px;
+                                top: 0px;
+                                opacity: 0;
+                                animation: PulsButton 1s linear infinite; 
+                                z-index: -1;
+                            }
+                            &:hover::before{
+                                display: none;
+                            }
+                            &:hover::after{
+                                display: none;
                             }
                         }
                     }
@@ -300,3 +362,4 @@ body{
         }
     }
 }
+@import '_keyframe.scss'
