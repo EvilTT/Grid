@@ -1,0 +1,14 @@
+// variable
+$perpl: #6C5CE7;
+$title_color: #2D3436;
+// Mixins
+@mixin text($fs,$c,$fw,$ls){
+    font-size: $fs;
+    color:$c;
+    font-weight: $fw;
+    letter-spacing: $ls;
+}
+// Шаблоны
+%Font{
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,17 +1,6 @@
-// Переменные
-$perpl: #6C5CE7;
-$title_color: #2D3436;
-// Mixins
-@mixin text($fs,$c,$fw,$ls){
-    font-size: $fs;
-    color:$c;
-    font-weight: $fw;
-    letter-spacing: $ls;
-}
-// Шаблоны
-%Font{
-    font-family: 'Roboto', sans-serif;
-}
+// Global import
+@import "_reset.scss";
+@import "_mixins, variable, shab.scss";
 // Code
 *{
     box-sizing: border-box;
@@ -37,7 +26,9 @@ body{
             position: sticky;
             top: 0px;
             background-color: #fff;
-            border-radius: 20px;
+           
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
             z-index: 5;
           .header__flexcon{
               display: flex;
@@ -357,6 +348,20 @@ body{
                         }
                     }
                     
+                }
+            }
+        }
+        .inform{
+            .inform__text{
+                h2{
+                    margin-top: 80px;
+                    @include text(32px,$title_color,700,-0.5px);
+                    margin: 0px;
+                }
+                .inform__subtitle{
+                    p{
+
+                    }
                 }
             }
         }
