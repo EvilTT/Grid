@@ -16,9 +16,10 @@ body{
         background-image: url("../image/Rectangle.png");
         background-repeat: no-repeat;
         background-position: right top;
-        max-width: 1440px;
+        max-width: 95%;
         margin: 0px auto;
         margin-top: 30px;
+        margin-bottom: 30px;
         background-color: #fff;
         border-radius: 20px;
         header{
@@ -353,14 +354,112 @@ body{
         }
         .inform{
             .inform__text{
-                h2{
-                    margin-top: 80px;
+                margin-top: 80px;
+                padding-bottom: 50px;
+                h2{   
                     @include text(32px,$title_color,700,-0.5px);
-                    margin: 0px;
                 }
                 .inform__subtitle{
+                    margin-top: 37px;
                     p{
-
+                        @include text(24px,$title_color,normal,-0.25px);
+                        line-height: 36px;
+                    }
+                }
+            }
+            .inform__flexcon_learn{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 97px;
+                .flexcon__img_o{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: #E84393;
+                    box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        margin-top: 8px;
+                    }
+                }
+                .flexcon__img_t{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: #0984E3;
+                    box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &::before{
+                        content:"";
+                        position: absolute;
+                        width: 18px;
+                        height: 18px;
+                        background-image: url("/image/icon2\ 2.png");
+                        top: 19px;
+                        left: 34px
+                    }
+                }
+                .flexcon__img_tr{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: $perpl;
+                    box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .flexcon__img_f{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: #00B894;
+                    box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        margin-bottom: 5px;
+                    }
+                }
+                .flexcon__learn_el{
+                    max-width: 270px;
+                    .flexcon__title{
+                        h3{
+                            margin-top: 38px;
+                            @include text(24px,$title_color,700,0.25px);
+                        }
+                    }
+                    .flexcon__subtitle{
+                        margin-top: 24px;
+                        p{
+                            @include text(18px,$title_color,normal,normal);
+                            line-height: 32px;
+                        }
+                    }
+                    .flexcon__button{
+                        margin-top: 44px;
+                        a{
+                            text-decoration: none;
+                            @include text(18px,$perpl,700,0.2px);
+                            padding: 15px 23px;
+                            border: 1px solid #ADADAD;
+                            border-radius: 20px;
+                            transition: all 0.5s ease;
+                            text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                            box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                            &:hover{
+                                background-color: $perpl;
+                                border-color: $perpl;
+                                color: white;
+                                
+                            }
+                        }
                     }
                 }
             }

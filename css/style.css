@@ -381,9 +381,10 @@ body .wrapper {
   background-image: url("../image/Rectangle.png");
   background-repeat: no-repeat;
   background-position: right top;
-  max-width: 1440px;
+  max-width: 95%;
   margin: 0px auto;
   margin-top: 30px;
+  margin-bottom: 30px;
   background-color: #fff;
   border-radius: 20px;
 }
@@ -832,13 +833,180 @@ body .wrapper .title__image .title__image_container .title__image_eltwo .image__
   padding: 15px 0px 0px 15px;
 }
 
-body .wrapper .inform .inform__text h2 {
+body .wrapper .inform .inform__text {
   margin-top: 80px;
+  padding-bottom: 50px;
+}
+
+body .wrapper .inform .inform__text h2 {
   font-size: 32px;
   color: #2D3436;
   font-weight: 700;
   letter-spacing: -0.5px;
-  margin: 0px;
+}
+
+body .wrapper .inform .inform__text .inform__subtitle {
+  margin-top: 37px;
+}
+
+body .wrapper .inform .inform__text .inform__subtitle p {
+  font-size: 24px;
+  color: #2D3436;
+  font-weight: normal;
+  letter-spacing: -0.25px;
+  line-height: 36px;
+}
+
+body .wrapper .inform .inform__flexcon_learn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 97px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_o {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #E84393;
+  -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+          box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_o img {
+  margin-top: 8px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_t {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #0984E3;
+  -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+          box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_t::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-image: url("/image/icon2 2.png");
+  top: 19px;
+  left: 34px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_tr {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #6C5CE7;
+  -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+          box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_f {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #00B894;
+  -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+          box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__img_f img {
+  margin-bottom: 5px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el {
+  max-width: 270px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el .flexcon__title h3 {
+  margin-top: 38px;
+  font-size: 24px;
+  color: #2D3436;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el .flexcon__subtitle {
+  margin-top: 24px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el .flexcon__subtitle p {
+  font-size: 18px;
+  color: #2D3436;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 32px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el .flexcon__button {
+  margin-top: 44px;
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el .flexcon__button a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #6C5CE7;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 15px 23px;
+  border: 1px solid #ADADAD;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  -webkit-box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+          box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+}
+
+body .wrapper .inform .inform__flexcon_learn .flexcon__learn_el .flexcon__button a:hover {
+  background-color: #6C5CE7;
+  border-color: #6C5CE7;
+  color: white;
 }
 
 @-webkit-keyframes PulsButton {
