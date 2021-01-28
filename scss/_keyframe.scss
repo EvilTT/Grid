@@ -24,3 +24,52 @@
         opacity: 0;
     }
 }
+@keyframes icon-animation-one{
+    25%{
+        transform: rotate(-20deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes icon-animation-two{
+    50%{
+        transform: translate(5px,-5px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes icon-animation-twos{
+    50%{
+        transform: translate(-5px,5px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes icon-animation-tree{
+    25%{
+        transform: rotate(-20deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes icon-animation-four{
+    25%{
+        transform: translate(0px,5px);
+    }
+    75%{
+        transform: translate(0px,-5px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}

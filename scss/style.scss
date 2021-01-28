@@ -184,6 +184,7 @@ body{
                             top: 70px;
                             right: -14px;
                             z-index: -1;
+                            display: inline-block;
                         }
                     }
                 }
@@ -380,8 +381,9 @@ body{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    img{
+                    >img{
                         margin-top: 8px;
+                        animation: icon-animation-one 2s linear infinite;  
                     }
                 }
                 .flexcon__img_t{
@@ -401,7 +403,11 @@ body{
                         height: 18px;
                         background-image: url("/image/icon2\ 2.png");
                         top: 19px;
-                        left: 34px
+                        left: 34px;
+                        animation: icon-animation-two 2s linear infinite;
+                    }
+                    img{
+                        animation: icon-animation-twos 2s linear infinite;
                     }
                 }
                 .flexcon__img_tr{
@@ -413,6 +419,9 @@ body{
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    img{
+                        animation: icon-animation-tree 2s linear infinite;
+                    }
                 }
                 .flexcon__img_f{
                     width: 70px;
@@ -425,6 +434,7 @@ body{
                     justify-content: center;
                     img{
                         margin-bottom: 5px;
+                        animation: icon-animation-four 2s linear infinite;
                     }
                 }
                 .flexcon__learn_el{
@@ -457,7 +467,6 @@ body{
                                 background-color: $perpl;
                                 border-color: $perpl;
                                 color: white;
-                                
                             }
                         }
                     }
@@ -466,4 +475,5 @@ body{
         }
     }
 }
-@import '_keyframe.scss'
+
+@import '_keyframe.scss';
