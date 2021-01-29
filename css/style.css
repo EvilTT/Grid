@@ -1114,7 +1114,7 @@ body .wrapper .inform .inform__flexcon_learn .flexcon__img_t::before {
   position: absolute;
   width: 18px;
   height: 18px;
-  background-image: url("/image/icon2 2.png");
+  background-image: url("../image/icon2 2.png");
   top: 19px;
   left: 34px;
   -webkit-animation: icon-animation-two 2s linear infinite;
