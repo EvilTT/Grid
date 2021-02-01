@@ -19,8 +19,8 @@ body{
         background-position: right top;
         max-width: 95%;
         margin: 0px auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
         background-color: #fff;
         border-radius: 20px;
         header{
@@ -28,7 +28,6 @@ body{
             position: sticky;
             top: 0px;
             background-color: #fff;
-           
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             z-index: 5;
@@ -521,7 +520,9 @@ body{
             }
             .price__flex_con{
                 margin-top: 48px;
-                display: flex;justify-content: space-between;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 80px;
                 .flex__el_con{
                     min-height: 472px;
                     margin: 32px 32px 32px 32px;
@@ -579,11 +580,6 @@ body{
                             position: absolute;
                             bottom: 0px;
                             left: 0px;
-                            // &:hover{
-                            //     background-color: $perpl;
-                            //     @include text(24px,white,700,0.25px);
-                            //     border: none;
-                            // }
                         }
                     }
                 }
@@ -633,25 +629,24 @@ body{
                     border-radius: 8px;
                     transition: all 0.3s ease;
                     position: relative;
-                    &::before{
-                        content:"";
-                        position: absolute;
-                        width: 200px;
-                        height: 126px;
-                        background-image: url("../image/wawes.png");
-                        background-position: center center
-                        ;
-                        left: -30px;
-                        bottom: -30px;
-                        
-                    }
+                    // &::before{
+                    //     content:"";
+                    //     position: absolute;
+                    //     width: 200px;
+                    //     height: 126px;
+                    //     background-image: url("../image/wawes.png");
+                    //     background-position: center center
+                    //     ;
+                    //     left: -30px;
+                    //     bottom: -30px; 
+                    // }
                     &:hover{
                         box-shadow: -3px 3px 10px 2px rgba(35, 47, 53, 0.205);
                         .flex__el_button{
                             a{
                                 background-color: $perpl;
                                 @include text(24px,white,700,0.25px);
-                                border: none;
+                                border: 1px solid $perpl;
                             }
                         }
                     }
@@ -669,6 +664,80 @@ body{
                             border-radius: 99px;
                             left: 195px;
                             top: -7px;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            background-image: url("../image/footer-bg-image.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+            border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            .footer__flex_con{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 95px;
+                border: 2px solid red;  
+                margin-left: 70px;
+                .footer__flex_el_left{
+                    margin-right: 30px;
+                    .el__left_follow{
+                        .left__follow_text{
+                            margin-top: 7px;
+                            >p{
+                                text-transform: uppercase;
+                                @include text (12px,#ADADAD, 800,2.5px);
+                            }
+                        }
+                        .el__left_flexcon{
+                            max-width: 261px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .left__flex_el{
+                                a{
+                                    display: block;
+                                    margin-top: 15px;
+                                    border-radius: 50%;
+                                    &:hover{
+                                        background-color: #FFEAA7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .el__left_information{
+                        margin-top: 40px;
+                        >p{
+                            text-transform: uppercase;
+                            @include text (12px,#ADADAD, 800,2.5px); 
+                        }
+                    }
+                    .el__left_navigation_flexcon{
+                        margin-top: 16px;
+                        display: flex;
+                        justify-content: space-between;
+                        .navigation__flex_el{
+                            min-width: 170px;
+                            &:nth-child(2), &:nth-child(3){
+                                margin-left: 30px;
+                            }
+                            li{
+                                &:nth-child(2), &:nth-child(3){
+                                    margin-top: 30px;
+                                }
+                               >a{
+                                   text-decoration: none;
+                                   @include text(14px,$title_color,400,0.25px);
+                                &:hover{
+                                    border-bottom: 1px solid $title_color;
+                                    }
+                               }
+                            }
                         }
                     }
                 }
