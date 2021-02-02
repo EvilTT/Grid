@@ -12,3 +12,7 @@ $title_color: #2D3436;
 %Font{
     font-family: 'Roboto', sans-serif;
 }
+%Footer_title{
+    text-transform: uppercase;
+    @include text (12px,#ADADAD,800,2.5px);
+}
