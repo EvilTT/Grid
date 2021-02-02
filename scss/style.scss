@@ -5,13 +5,18 @@
 // Code
 *{
     box-sizing: border-box;
+    ::selection{
+        background-color: #8172f171;
+    }
 }
 .content{
     max-width: 1174px;
     margin: 0px auto;
 } 
 body{
-    background-color: #A29BFE;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
     @extend %Font;
     .wrapper{
         background-image: url("../image/Rectangle.png");
@@ -42,6 +47,7 @@ body{
                   >a{
                     @include text(48px,$title_color,bold,-1px);
                     text-decoration: none;
+                    outline:none;
                     &::before{
                         content: '';
                         position: absolute;
@@ -95,6 +101,7 @@ body{
                         @include text(18px,$perpl,normal,0.2px);
                         text-decoration: none;
                         transition: all 0.25s ease;
+                        outline:none;
                         &:hover{
                             @include text (18px,$title_color,bold,0.2px);
                         }
@@ -114,6 +121,7 @@ body{
                     transition: all 0.5s ease;
                     z-index: 1;
                     position: relative;
+                    outline:none;
                     &:hover{
                         background-color: $title_color;
                     }
@@ -219,6 +227,7 @@ body{
                     .image__elone_image{
                         position: relative;
                         transition: 0.3s;
+                        border-radius: 20px;
                         &:hover{
                             transform:scale(1.1);
                         }
@@ -240,6 +249,9 @@ body{
                             right: 70px;
                             text-align: center;
                         }
+                        img{
+                            box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1), 0px 16px 32px rgba(38, 50, 56, 0.08);
+                        }
                     }
                     .title__button{
                         margin-top: 55px;
@@ -254,6 +266,7 @@ body{
                             transition: all 0.7s ease;
                             position: relative;
                             z-index: 1;
+                            outline:none;
                             &:hover{
                                 background-color: $title_color;
                             }
@@ -329,6 +342,8 @@ body{
                                 z-index: 4;
                                 top: 254px;
                                 right: 0px;
+                                display: block;
+                                border-radius: 20px;
                             }
                         }
                         &:nth-child(4){
@@ -347,6 +362,10 @@ body{
                         }
                         &:nth-child(6){
                             padding: 15px 0px 0px 15px;
+                        }
+                        img{
+                            box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1), 0px 16px 32px rgba(38, 50, 56, 0.08);
+                            border-radius: 20px;
                         }
                     }
                     
@@ -463,6 +482,7 @@ body{
                             transition: all 0.5s ease;
                             text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
                             box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                            outline:none;
                             &:hover{
                                 background-color: $perpl;
                                 border-color: $perpl;
@@ -579,7 +599,8 @@ body{
                             transition: all 0.5s ease;
                             position: absolute;
                             bottom: 0px;
-                            left: 0px;
+                            left: 0px;  
+                            outline:none;                     
                         }
                     }
                 }
@@ -629,6 +650,7 @@ body{
                     border-radius: 8px;
                     transition: all 0.3s ease;
                     position: relative;
+                    // Сделать что бы при наведении на карточку ыбли под ней, z-index почему то не робит(наверн из-за наложения)
                     // &::before{
                     //     content:"";
                     //     position: absolute;
@@ -638,8 +660,9 @@ body{
                     //     background-position: center center
                     //     ;
                     //     left: -30px;
-                    //     bottom: -30px; 
+                    //     bottom: -30px;
                     // }
+                    // Сделать что бы при наведении на карточку ыбли под ней, z-index почему то не робит(наверн из-за наложения)
                     &:hover{
                         box-shadow: -3px 3px 10px 2px rgba(35, 47, 53, 0.205);
                         .flex__el_button{
@@ -647,6 +670,7 @@ body{
                                 background-color: $perpl;
                                 @include text(24px,white,700,0.25px);
                                 border: 1px solid $perpl;
+                                outline:none;
                             }
                         }
                     }
@@ -705,6 +729,7 @@ body{
                                         display: block;
                                         margin-top: 15px;
                                         border-radius: 50%;
+                                        outline:none;
                                         &:hover{
                                             background-color: #FFEAA7;
                                         }
@@ -734,6 +759,7 @@ body{
                                 >a{
                                     text-decoration: none;
                                     @include text(14px,$title_color,400,0.25px);
+                                    outline:none;
                                     &:hover{
                                         border-bottom: 1px solid $title_color;
                                         }
@@ -766,23 +792,49 @@ body{
                                 display: flex;
                                 flex-wrap: wrap;
                                 justify-content: space-between;
-                                input{
-                                    min-width: 270px;
-                                    height: 48px;
-                                    padding: 18px 16px 18px 16px;
-                                    background-color: #cec9c9a6;
-                                    border-radius:16px;
-                                    outline: none;
-                                    border: none;
-                                    @extend %Font;
-                                    @include text(18px,$title_color,500,normal);
-                                    &::placeholder{
-                                        @include text(18px,$title_color,400,normal);
+                                    input{
+                                        min-width: 270px;
+                                        height: 48px;
+                                        padding: 18px 36px 18px 16px;
+                                        background-color: #cec9c9a6;
+                                        border-radius:16px;
+                                        outline: none;
+                                        border: none;
+                                        @extend %Font;
+                                        @include text(18px,$title_color,500,normal);
+                                        &::placeholder{
+                                            @include text(18px,$title_color,400,normal);
+                                        }                                                                          
                                     }
-                                    &:nth-child(2){
-                                        margin-left: 30px;  
+                                .footer__input_name{
+                                    position: relative;
+                                    &::before{
+                                        content:'';
+                                        position: absolute;
+                                        width: 40px;
+                                        height: 40px;
+                                        background-image: url("../image/icon-user.png");
+                                        background-repeat: no-repeat;
+                                        background-position: center center;
+                                        right: 0px;
+                                        bottom: 5px;
                                     }
-                                }
+                                }  
+                                .footer__input_email{
+                                    margin-left: 30px;
+                                    position: relative;
+                                    &::before{
+                                        content:'';
+                                        position: absolute;
+                                        width: 40px;
+                                        height: 40px;
+                                        background-image: url("../image/icon-mail.png");
+                                        background-repeat: no-repeat;
+                                        background-position: center center;
+                                        right: 0px;
+                                        bottom: 5px;
+                                    }
+                                }  
                             }
                             .el__right_textcon{
                                 display: flex;
@@ -792,6 +844,7 @@ body{
                                 margin-top: 30px;
                                 .textarea{
                                     position: relative;
+                                    transition: all 0.3s ease;
                                     &::before{
                                     content:'';
                                     position: absolute;
@@ -800,7 +853,16 @@ body{
                                     background-image: url("../image/icon-edit.png");
                                     background-repeat: no-repeat;
                                     background-position: center center;
-                                    right: 0px;
+                                    right: 0px;  
+                                    display: block;                            
+                                    }
+                                    &:focus-within{
+                                        &::before{
+                                            transform: scale(0.8) translate(-13px,-5px);                                            
+                                        } 
+                                        textarea{
+                                            resize: vertical;
+                                        }                                      
                                     }
                                     textarea{
                                         resize: none;
@@ -809,21 +871,56 @@ body{
                                         background-color: #cec9c9a6;
                                         @include text(18px,$perpl,700,0.2px);
                                         padding: 20.5px 16px;  
-                                        overflow: auto;
-                                        // &:focus .textarea::before{
-                                        //     z-index: -1;
-                                        // }
+                                        overflow: auto;                                    
                                     }
                                 }
-                                input[type=submit]{
-                                    box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1), 0px 16px 32px rgba(38, 50, 56, 0.08);
-                                    border-radius: 16px;
-                                    border: none;
-                                    background-color: $perpl;
-                                    @include text(24px,white,700,0.25px);
-                                    @extend %Font;
-                                    padding: 30px 52px;
-                                    text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                                .footer__form_button{
+                                    transition: all 0.5s ease;
+                                    position: relative;
+                                    z-index: 1;
+                                    &:hover::before{
+                                        content:'';
+                                        height: 89px;
+                                        position: absolute;
+                                        width: 166px;
+                                        background-color: #2d343693;
+                                        z-index: -1;
+                                        opacity: 0;
+                                        border-radius: 16px;
+                                        top: 0px;
+                                        left: 0px;
+                                        animation-delay: 0.3s;
+                                        animation: PulsButtonHeader 0.8s linear 1;  
+                                    }
+                                    &:hover::after{
+                                        content:'';
+                                        height: 89px;
+                                        position: absolute;
+                                        width: 166px;
+                                        background-color: #2d343618;
+                                        z-index: -1;
+                                        opacity: 0;
+                                        border-radius: 16px;
+                                        top: 0px;
+                                        left: 0px;
+                                        animation: PulsButtonHeader 0.8s linear 1;
+                                    }
+                                    button[type=submit]{
+                                        box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1), 0px 16px 32px rgba(38, 50, 56, 0.08);
+                                        border-radius: 16px;
+                                        border: none;
+                                        background-color: $perpl;
+                                        @include text(24px,white,700,0.25px);
+                                        @extend %Font;
+                                        padding: 30px 52px;
+                                        text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+                                        transition: all 0.5s ease;
+                                        outline:none;
+                                        text-transform: uppercase;
+                                        &:hover{
+                                            background-color: $title_color;
+                                        }
+                                    }
                                 }
                             }
                         }
