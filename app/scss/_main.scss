@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    ::selection{
+        background-color: #8172f171;
+    }
+}
+.content{
+    max-width: 1174px;
+    margin: 0px auto;
+}

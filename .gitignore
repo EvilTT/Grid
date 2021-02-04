@@ -1,0 +1,3 @@
+#Исключаем файлы Node.js для gulp
+/package-lock.json
+/node_modules

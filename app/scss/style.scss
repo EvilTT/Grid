@@ -1,25 +1,15 @@
-// Global import
-@import "_reset.scss";
-@import "_mixins, variable, shab.scss";
-@import '_keyframe.scss';
+@import'_reset.scss';
+@import'_keyframes.scss';
+@import'_main.scss';
+@import'_mixins, variables, templates.scss';
 // Code
-*{
-    box-sizing: border-box;
-    ::selection{
-        background-color: #8172f171;
-    }
-}
-.content{
-    max-width: 1174px;
-    margin: 0px auto;
-} 
 body{
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
     @extend %Font;
     .wrapper{
-        background-image: url("../image/Rectangle.png");
+        background-image: url("../images/Rectangle.png");
         background-repeat: no-repeat;
         background-position: right top;
         max-width: 95%;
@@ -53,7 +43,7 @@ body{
                         position: absolute;
                         width: 35px;
                         height: 35px;
-                        background-image: url('../image/icon-layout.png');
+                        background-image: url('../images/icon-layout.png');
                         top: 6px;
                         left: -72.5px + 19px;
                         background-position: center center;
@@ -167,7 +157,7 @@ body{
                 position: absolute;
                 width: 209px;
                 height: 285px;
-                background-image: url("../image/tochki.png");
+                background-image: url("../images/tochki.png");
                 background-position: center center;
                 right: 0px;
                 top: 18px;
@@ -336,7 +326,7 @@ body{
                              &::after{
                                 content:"";
                                 position: absolute;
-                                background-image: url('../image/title4eff.png');
+                                background-image: url('../images/title4eff.png');
                                 width: 170px;
                                 height: 128px;
                                 z-index: 4;
@@ -420,7 +410,7 @@ body{
                         position: absolute;
                         width: 18px;
                         height: 18px;
-                        background-image: url("../image/icon2\ 2.png");
+                        background-image: url("../images/icon2\ 2.png");
                         top: 19px;
                         left: 34px;
                         animation: icon-animation-two 2s linear infinite;
@@ -611,7 +601,7 @@ body{
                             position: absolute;
                             width: 32px;
                             height: 32px;
-                            background-image: url("../image/list\ marker\ 1.png");
+                            background-image: url("../images/list\ marker\ 1.png");
                             background-position: center center;
                             left:-48px;
                             top: -8px;
@@ -625,7 +615,7 @@ body{
                             position: absolute;
                             width: 32px;
                             height: 32px;
-                            background-image: url("../image/list\ marker\ 2.png");
+                            background-image: url("../images/list\ marker\ 2.png");
                             background-position: center center;
                             left:-48px;
                             top: -8px;
@@ -639,7 +629,7 @@ body{
                             position: absolute;
                             width: 32px;
                             height: 32px;
-                            background-image: url("../image/list\ marker\ 3.png");
+                            background-image: url("../images/list\ marker\ 3.png");
                             background-position: center center;
                             left:-48px;
                             top: -8px;
@@ -694,7 +684,7 @@ body{
             }
         }
         footer{
-            background-image: url("../image/footer-bg-image.png");
+            background-image: url("../images/footer-bg-image.png");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center bottom;
@@ -813,7 +803,7 @@ body{
                                         position: absolute;
                                         width: 40px;
                                         height: 40px;
-                                        background-image: url("../image/icon-user.png");
+                                        background-image: url("../images/icon-user.png");
                                         background-repeat: no-repeat;
                                         background-position: center center;
                                         right: 0px;
@@ -828,7 +818,7 @@ body{
                                         position: absolute;
                                         width: 40px;
                                         height: 40px;
-                                        background-image: url("../image/icon-mail.png");
+                                        background-image: url("../images/icon-mail.png");
                                         background-repeat: no-repeat;
                                         background-position: center center;
                                         right: 0px;
@@ -850,7 +840,7 @@ body{
                                     position: absolute;
                                     width: 40px;
                                     height: 40px;
-                                    background-image: url("../image/icon-edit.png");
+                                    background-image: url("../images/icon-edit.png");
                                     background-repeat: no-repeat;
                                     background-position: center center;
                                     right: 0px;  
@@ -930,3 +920,7 @@ body{
     }
 }
 
+
+
+
+@import'_media.scss';
