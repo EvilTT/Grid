@@ -5,8 +5,9 @@
 // Code
 body{
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background-repeat: no-repeat;
     @extend %Font;
     .wrapper{
         background-image: url("../images/Rectangle.png");
@@ -31,6 +32,39 @@ body{
               justify-content: space-between;
               align-items: center;
               height: 96px;
+              .header__burger_menu{
+                display: none;
+                cursor: pointer;
+                .header__burger{
+                    width: 50px;
+                    height: 5px;
+                    background-color: $title_color;
+                    box-shadow: 0px 2px 5px rgba(35, 47, 53, 0.281);
+                    position: relative;
+                    &::before{
+                      content:'';
+                      position: absolute;
+                      width: 50px;
+                      height: 5px;
+                      background-color: $title_color;
+                      box-shadow: 0px 2px 5px rgba(35, 47, 53, 0.281);
+                      top: -12px;
+                      border-top-left-radius: 20px;
+                      border-top-right-radius: 20px; 
+                    }
+                    &::after{
+                      content:'';
+                      position: absolute;
+                      width: 50px;
+                      height: 5px;
+                      background-color: $title_color;
+                      box-shadow: 0px 2px 5px rgba(35, 47, 53, 0.281);
+                      bottom: -12px;
+                      border-bottom-left-radius: 20px;
+                      border-bottom-right-radius: 20px;
+                    }
+              }
+              }
               .header__logo{
                 margin-left: 72px;
                 position: relative;
@@ -161,6 +195,7 @@ body{
                 background-position: center center;
                 right: 0px;
                 top: 18px;
+                z-index: -1;
             }
             .title{
                 text-align: center;
@@ -190,13 +225,14 @@ body{
         }
         .title__image{
             .title__image_container{
-                margin-top: 79px;
+                padding-top: 79px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding-bottom: 80px;
                 .title__image_elone{
                     .title__text{
+                        max-width: 270px;
                         >p{
                             @include text(18px,$title_color,normal, normal);
                             line-height: 32px;
@@ -217,7 +253,7 @@ body{
                     .image__elone_image{
                         position: relative;
                         transition: 0.3s;
-                        border-radius: 20px;
+                        max-width: 270px;
                         &:hover{
                             transform:scale(1.1);
                         }
@@ -241,6 +277,7 @@ body{
                         }
                         img{
                             box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1), 0px 16px 32px rgba(38, 50, 56, 0.08);
+                            border-radius: 30px;
                         }
                     }
                     .title__button{
@@ -300,7 +337,7 @@ body{
                     display: flex;
                     flex-wrap: wrap;
                     flex-basis: 200%;
-                    overflow: visible;
+                    // overflow: visible;
                     .image__eltwo_img{
                         position: relative;
                         transition: 0.3s;
@@ -319,10 +356,12 @@ body{
                             }
                         }
                         &:nth-child(2){
-                             padding: 159px 15px 0px 15px;
+                             align-self: flex-end;
+                             padding: 0px 15px 15px 15px;
                         }
                         &:nth-child(3){
-                             padding: 159px 0px 0px 15px;
+                            align-self: flex-end;
+                             padding: 0px 0px 15px 15px;
                              &::after{
                                 content:"";
                                 position: absolute;
@@ -330,13 +369,14 @@ body{
                                 width: 170px;
                                 height: 128px;
                                 z-index: 4;
-                                top: 254px;
+                                bottom: 15px;
                                 right: 0px;
                                 display: block;
                                 border-radius: 20px;
                             }
                         }
                         &:nth-child(4){
+                            align-self: flex-start;
                             padding: 15px 15px 0px 30px;
                         }
                         &:nth-child(5){
@@ -351,6 +391,7 @@ body{
                             }
                         }
                         &:nth-child(6){
+                            align-self: flex-start;
                             padding: 15px 0px 0px 15px;
                         }
                         img{
@@ -646,7 +687,7 @@ body{
                     //     position: absolute;
                     //     width: 200px;
                     //     height: 126px;
-                    //     background-image: url("../image/wawes.png");
+                    //     background-image: url("../images/wawes.png");
                     //     background-position: center center
                     //     ;
                     //     left: -30px;
@@ -694,7 +735,7 @@ body{
                 max-width: 1300px;
                 margin: 0 auto;
                 padding: 0px 40px;
-            }
+            
                 .footer__flex_con{
                     display: flex;
                     justify-content: space-between;
@@ -861,7 +902,8 @@ body{
                                         background-color: #cec9c9a6;
                                         @include text(18px,$perpl,700,0.2px);
                                         padding: 20.5px 16px;  
-                                        overflow: auto;                                    
+                                        overflow: auto; 
+                                        min-width: 370px;                               
                                     }
                                 }
                                 .footer__form_button{
@@ -915,7 +957,7 @@ body{
                             }
                         }
                     }
-                }
+            }    }
         }
     }
 }
