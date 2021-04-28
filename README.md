@@ -1,3 +1,3 @@
-Landing Page for HTML/SCSS/Gulp.
+My first Landing Page!
 
 
